@@ -1,0 +1,83 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addTask",
+			"inputs": [
+				{"name":"_nameCase","type":"string"},
+				{"name":"_time","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getQtyOpenTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint8"}
+			]
+		},
+		{
+			"name": "getListTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "getDescriptionTasks",
+			"inputs": [
+				{"name":"key","type":"uint8"}
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "deleteTask",
+			"inputs": [
+				{"name":"key","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "markOpenTask",
+			"inputs": [
+				{"name":"key","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mapKey",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"mapKey","type":"uint8"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"nameCase","type":"string"},{"name":"time","type":"uint32"},{"name":"isDoneCase","type":"bool"}],"name":"mapTasks","type":"map(uint8,tuple)"},
+		{"name":"mapKey","type":"uint8"}
+	]
+}
