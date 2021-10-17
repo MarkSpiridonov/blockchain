@@ -22,8 +22,8 @@ contract Multiplication {
 	}
 
 	function add(uint value) public checkOwnerAndAccept {
-        require(value >= 1 && value <= 10, 103, "Number from 1 to 10.");
-        tvm.accept();
+        	require(value >= 1 && value <= 10, 103, "Number from 1 to 10.");
+        	tvm.accept();
 		prod *= value;
 	}
 }
